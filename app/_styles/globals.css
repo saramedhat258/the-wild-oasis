@@ -24,6 +24,7 @@
     animation: rotate 1s infinite linear;
   }
 
+
   @keyframes rotate {
     to {
       transform: rotate(1turn);
@@ -31,10 +32,20 @@
   }
 }
 
+.rdp-month{
+  width: 250px !important;
+  margin: 0 25px !important;
+}
+.rdp-nav{
+  display: none !important;
+}
+
 /* For data picker */
 .rdp {
   --rdp-cell-size: 32px !important;
   --rdp-accent-color: theme('colors.accent.500') !important;
-  --rdp-background-color: theme('colors.accent.600') !important;
+  --rdp-accent-background-color: theme('colors.accent.600') !important;
+  --rdp-day_button-height:32px !important;
+  --rdp-day_button-width: 32px !important;
   margin: 0 !important;
 }
