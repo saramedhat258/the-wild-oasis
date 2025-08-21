@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        xxl:"1350px",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

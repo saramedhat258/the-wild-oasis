@@ -6,11 +6,12 @@ async function SelectCountry({ defaultCountry, name, id, className }) {
   const countries = await getCountries();
   const flag =
     countries.find((country) => country.name === defaultCountry)?.flag ?? '';
-
+  console.log('country:', defaultCountry);
   return (
     <select
       name={name}
       id={id}
+      key={defaultCountry}
       // Here we use a trick to encode BOTH the country name and the flag into the value. Then we split them up again later in the server action
       defaultValue={`${defaultCountry}%${flag}`}
       className={className}

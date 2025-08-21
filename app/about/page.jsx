@@ -9,9 +9,17 @@ export const metadata = {
 
 function page() {
     return (
-        <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
+        <div className="grid lg:grid-cols-5 grid-cols-1 md:gap-x-24 lg:gap-y-32 gap-10 md:text-lg items-center ">
+            <div className="lg:hidden block col-span-2">
+                <Image
+                    src={image1}
+                    placeholder="blur"
+                    quality={80}
+                    alt="Family sitting around a fire pit in front of cabin"
+                />
+            </div>
             <div className="col-span-3">
-                <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+                <h1 className="md:text-4xl text-3xl mb-10 text-accent-400 font-medium">
                     Welcome to The Wild Oasis
                 </h1>
 
@@ -37,7 +45,7 @@ function page() {
                 </div>
             </div>
 
-            <div className="col-span-2">
+            <div className="lg:block hidden col-span-2">
                 <Image
                     src={image1}
                     placeholder="blur"
@@ -55,7 +63,7 @@ function page() {
             </div>
 
             <div className="col-span-3">
-                <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+                <h1 className="md:text-4xl text-3xl mb-10 text-accent-400 font-medium">
                     Managed by our family since 1962
                 </h1>
 
@@ -78,7 +86,7 @@ function page() {
                     <div>
                         <Link
                             href="/cabins"
-                            className="inline-block mt-4 bg-accent-500 px-8 py-5 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
+                            className="inline-block mt-4 bg-accent-500 sm:px-8 px-2 py-5 text-primary-800 sm:text-lg font-semibold hover:bg-accent-600 transition-all"
                         >
                             Explore our luxury cabins
                         </Link>
