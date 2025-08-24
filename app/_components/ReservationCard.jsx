@@ -9,7 +9,7 @@ export const formatDistanceFromNow = (dateStr) =>
         addSuffix: true,
     }).replace("about ", "");
 
-function ReservationCard({ booking,onDelete }) {
+function ReservationCard({ booking, onDelete }) {
     const {
         id,
         guestId,
@@ -58,13 +58,16 @@ function ReservationCard({ booking,onDelete }) {
                     ) &mdash; {format(new Date(endDate), "EEE, MMM dd yyyy")}
                 </p>
 
-                <div className="flex md:gap-5 gap-1 mt-auto items-baseline">
-                    <p className="md:text-xl font-semibold text-accent-400">${totalPrice}</p>
-                    <p className="text-primary-300">&bull;</p>
-                    <p className="md:text-lg text-primary-300">
-                        {numGuests} guest{numGuests > 1 && "s"}
-                    </p>
-                    <p className="ml-auto text-xs text-primary-400">
+                <div className="max-md:mt-3 max-md:flex-col  flex md:gap-5 gap-1 mt-auto items-baseline">
+                    <div className="flex gap-1">
+                        <p className="md:text-xl font-semibold text-accent-400">${totalPrice}</p>
+                        <p className="text-primary-300">&bull;</p>
+                        <p className="md:text-lg text-primary-300">
+                            {numGuests} guest{numGuests > 1 && "s"}
+                        </p>
+                    </div>
+
+                    <p className="text-xs text-primary-400">
                         Booked {format(new Date(created_at), "EEE, MMM dd yyyy, p")}
                     </p>
                 </div>
@@ -82,7 +85,7 @@ function ReservationCard({ booking,onDelete }) {
                         </Link>
                         <DeleteReservation bookingId={id} onDelete={onDelete} />
                     </>
-                    :null
+                    : null
                 }
             </div>
         </div>
